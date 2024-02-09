@@ -1,0 +1,110 @@
+<!-- Connor Sisourath -->
+<!-- CS 341 Homework 1 -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"/></script>
+
+        <!-- linking the css file -->
+        <title>CS 341 Homework</title>
+        <link rel="stylesheet" href="stylesheets/sisourat25.css">
+    </head>
+
+    <body>
+        <!-- the top title and picture  -->
+        <div class="topTitle">
+            <h1>Cheesecake Order Form</h1> 
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg/1200px-Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg" alt="Cheesecake image" width="200" height="200">
+            <br>
+        </div>
+    
+        <div class="bottomSection">
+
+            <!-- confirmation page  -->
+            <div class="orderonfirmation" id="orderConfirmation">
+                <h2>Order Confirmed!</h2>
+                <p id="quantityConfirmation">Quantity: </p><br>
+                <p id="toppingConfirmation">Topping: </p><br>
+                <p id="notesConfirmation">Notes: </p><br>
+            </div>
+            
+            <form id="myForm">
+                <div class="selection">
+                    <table>
+                        <tr>
+                            <!-- label for quantity and topping -->
+                            <td><label for="Quantity">Quantity</label></td>
+                            <td><label for="topping">Topping</label></td> 
+                        </tr>
+                        <tr>
+                            <!-- dropdown menu to select quantity -->
+                            <td><select id="quantitySelected">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select></td>
+                            
+                            <td>
+                                <!-- bubble to select the toppings -->
+                                <input type="radio" id="plain" name="topping" value="Plain">
+                                <label for="plain">Plain</label><br>
+                                <input type="radio" id="cherry" name="topping" value="Cherry">
+                                <label for="cherry">Cherry</label><br>
+                                <input type="radio" id="chocolate" name="topping" value="Chocolate">
+                                <label for="chocolate">Chocolate</label><br><br>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- text area for notes -->
+                <label for="Notes">Notes:</label><br>
+                <textarea name="specialInstructions" id="myTextbox" placeholder="Enter any special instructions here." cols="50" rows="5"></textarea><br><br>
+
+                <!-- submit button -->
+                <input type="submit" value="Order">
+
+            </form>
+
+            
+
+            <!-- bulleted list for last month's orders -->
+            <div class="totalOrderSection">
+                <table> <tr>
+                <td><h3>Total Orders Last </h3></td>
+
+                <!-- drop down button for month -->
+                <!-- referenced w3schools.com -->
+                <td><div class=" dropdown">
+                    <button class="dropbtn" id="dropbtn">Month</button>
+                    <div class="dropdown-content" id="months">
+                        <a href="#" sectionId="Jan">Jan</a>
+                        <a href="#" sectionId="Feb">Feb</a>
+                        <a href="#" sectionId="Mar">Mar</a>
+                        <a href="#" sectionId="Apr">Apr</a>
+                        <a href="#" sectionId="May">May</a>
+                        <a href="#" sectionId="Jun">Jun</a>
+                        <a href="#" sectionId="Jul">Jul</a>
+                        <a href="#" sectionId="Aug">Aug</a>
+                        <a href="#" sectionId="Sep">Sep</a>
+                        <a href="#" sectionId="Oct">Oct</a>
+                        <a href="#" sectionId="Nov">Nov</a>
+                        <a href="#" sectionId="Dec">Dec</a>
+                        
+                    </div>
+                </div></td>
+                </tr></table>
+
+                <ul>
+                    <li>11 cherry</li>
+                    <li>17 chocolate</li>
+                    <li>31 plain</li>
+                </ul>
+            </div>
+        </div>
+        <script src ="javascripts/scripts.js"></script>
+    </body>
+</html>
