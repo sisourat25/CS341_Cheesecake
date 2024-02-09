@@ -1,3 +1,5 @@
+// Connor Sisourath
+
 //getting items for the order confirmation and textbox
 const notes = document.getElementById('myTextbox');
 const form = document.getElementById('myForm');
