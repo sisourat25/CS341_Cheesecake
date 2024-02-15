@@ -49,3 +49,20 @@ form.addEventListener('submit', (e)=> {
         notesConfirmation.innerHTML = "Notes: " + notes.value;
     }
 })
+
+// Event listener for month selection
+$(document).ready(function() {
+    $('#months a').click(function(event) {
+        event.preventDefault()
+        var selectedMonth = $(this).attr('sectionId');
+
+        // Issue a POST request
+        $.post('/orders', { month: selectedMonth }, function(data) {
+            $('.totalOrderSection ul').empty();
+
+            $.each(data, function(index, order) {
+                $('.totalOrderSection ul').append('<li>' + order.quantity + ' ' + order.topping + '</li>');
+            });
+        });
+    });
+});
